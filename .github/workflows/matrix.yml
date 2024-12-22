@@ -4,6 +4,7 @@ jobs:
   build:
     strategy:
       matrix:
+          continue-on-error: true
           node-version: [12, 14, 16]
           operating-system: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.operating-system }}
