@@ -2,12 +2,12 @@ name: Matrix Deployment
 on: push
 jobs:
   build:
+    continue-on-error: true
     strategy:
       matrix:
-          continue-on-error: true
           node-version: [12, 14, 16]
           operating-system: [ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: ${{ matrix.operating-system}}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
