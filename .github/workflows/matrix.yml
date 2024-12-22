@@ -9,7 +9,7 @@ jobs:
           operating-system: [ubuntu-latest, windows-latest]
           include:
             - node-version: 18
-            - operating-system: ubuntu-latest
+              operating-system: ubuntu-latest
     runs-on: ${{ matrix.operating-system}}
     steps:
       - name: Checkout Code
